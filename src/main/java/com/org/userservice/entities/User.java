@@ -27,7 +27,7 @@ public class User {
 	@Column(name = "id")
 	private String userId;
 	
- 	@Column(name = "name",length = 20)
+ 	@Column(name = "name",length = 30)
 	private String name;
 	
     @Column(name = "email")
@@ -36,7 +36,9 @@ public class User {
     @Column(name = "about")
 	private String about;
     
+   
     @Transient
+    @Builder.Default
     private List<Rating> ratings = new ArrayList<>();
 	
 
